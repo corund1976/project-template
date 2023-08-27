@@ -1,0 +1,38 @@
+:root {
+  --active: #646afd;
+  --hover: #8c90ff;
+  --white: #ffffff;
+  --bg-button: #1b1e2f;
+  --bg-main: #150524;
+  --bg-scnd: #270c40;
+  --active-10: #646afd1a;
+  --no-active: #60628f;
+  --orange: #f6a428;
+  --complete: #27bf76;
+  --turquoise: #53cae5;
+  --stroke: #ffffff1a;
+  --opacity-50: #ffffff80;
+
+  --gradient-orange: linear-gradient(
+    to bottom,
+    #f6a428 0%,
+    rgba(246, 164, 40, 0) 100%
+  );
+  --gradient-turquoise: linear-gradient(
+    to bottom,
+    #53cae5 0%,
+    rgba(83, 202, 229, 0) 100%
+  );
+  --gradient-violet: linear-gradient(
+    to bottom,
+    #646afd 0%,
+    rgba(100, 106, 253, 0) 100%
+  );
+
+  --box-shadow: 0px 24px 40px rgba(0, 0, 0, 0.2);
+
+  --trans-time: 300ms;
+  --trans-func: cubic-bezier(0.4, 0, 0.2, 1);
+
+  --window-height: 100%;
+}

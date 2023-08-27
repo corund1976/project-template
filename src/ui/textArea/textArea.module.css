@@ -1,0 +1,90 @@
+.textarea_container {
+  position: relative;
+
+  height: 80px;
+}
+@media screen and (min-width: 768px) {
+  .textarea_container {
+    height: 120px;
+  }
+}
+
+.textarea_disabled {
+  composes: textarea_container;
+
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.label {
+  display: none;
+}
+
+.textarea {
+  font-family: 'Gilroy', Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.4;
+
+  color: var(--active, #646afd);
+  background-color: var(--bg-scnd, #270c40);
+  backdrop-filter: blur(12px);
+
+  border-radius: 12px;
+  border: none;
+
+  padding-left: 12px;
+  padding-right: 12px;
+
+  padding-top: 14px;
+  padding-bottom: 14px;
+
+  width: 100%;
+  height: 100%;
+
+  min-height: 80px;
+
+  resize: none; /*Запрет изменять размер вручную*/
+  overflow-y: hidden;
+
+  cursor: pointer;
+
+  word-wrap: break-word;
+}
+@media screen and (min-width: 768px) {
+  .textarea {
+    padding-left: 20px;
+    padding-right: 20px;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    min-height: 120px;
+  }
+}
+
+textarea::placeholder {
+  font-family: 'Gilroy', Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.4;
+
+  color: var(--no-active, #60628f);
+
+  transition: all var(--trans-time) var(--trans-func);
+}
+
+textarea:hover::placeholder {
+  color: var(--hover, #8c90ff);
+}
+
+textarea:hover {
+  outline: solid 1px var(--blue);
+}
+
+textarea:focus {
+  color: var(--white, #fff);
+
+  /* outline: solid 1px var(--hover, #8c90ff); */
+  outline: none;
+}

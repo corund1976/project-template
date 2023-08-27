@@ -1,0 +1,23 @@
+.slick-dots {
+  /* убираю стоковый размер строки слайдера */
+  font-size: 0;
+}
+
+.slick-dots > li > button {
+  /* убираю стоковую нумерацию кнопок */
+  font-size: 0;
+  line-height: 0;
+
+  background: transparent;
+
+  border: none;
+
+  width: 100%;
+  height: 100%;
+}
+
+.slick-arrow {
+  /* убираю стоковые надписи */
+  font-size: 0;
+  line-height: 0;
+}

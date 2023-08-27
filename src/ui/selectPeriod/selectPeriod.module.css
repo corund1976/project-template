@@ -1,0 +1,88 @@
+.select_container {
+  position: relative;
+
+  height: 100%;
+}
+
+.select_disabled {
+  composes: select_container;
+
+  opacity: 0.5;
+}
+
+/* ReactSelect */
+.control {
+  background: transparent;
+  background-image: url(/src/images/arrow-left-no-active.svg),
+    url(/src/images/arrow-right-no-active.svg);
+  background-repeat: no-repeat;
+  background-position: center left 12px, center right 12px;
+
+  border: 1px solid var(--active-10, rgba(100, 106, 253, 0.1));
+  border-radius: 12px;
+
+  padding-left: 50px;
+  padding-right: 50px;
+
+  width: 100%;
+  height: 48px;
+
+  cursor: pointer !important;
+}
+@media screen and (min-width: 768px) {
+  .control {
+    min-width: 235px;
+  }
+}
+
+.single_value {
+  color: #fff;
+
+  background-image: url(/src/images/calendar.svg);
+  background-position: center left;
+  background-repeat: no-repeat;
+
+  padding-left: 34px;
+
+  width: fit-content;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.menu {
+  background: var(--bg-main, #150524);
+
+  border: 1px solid var(--active-10, rgba(100, 106, 253, 0.1));
+  border-radius: 12px;
+
+  padding: 4px 20px;
+
+  margin-top: 8px; /* отступ вниз dropdown от select */
+}
+@media screen and (min-width: 768px) {
+  .menu {
+    padding: 8px 20px;
+  }
+}
+
+.option {
+  text-align: center;
+  /* color: var(--active, #646afd); */
+  color: var(--no-active, #60628f);
+
+  padding: 6px 0; /* раздвигаю пункты в dropdown по вертикали */
+
+  cursor: pointer !important;
+
+  transition: color var(--trans-time) var(--trans-func);
+}
+.option:hover {
+  color: var(--hover, #8c90ff);
+}
+
+/* убираю курсор при "селекте" в focus */
+.input {
+  color: transparent;
+  text-shadow: 0 0 0 black;
+}

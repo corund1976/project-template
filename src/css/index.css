@@ -1,0 +1,56 @@
+:root {
+  font-family: 'Gilroy', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.4;
+
+  color: var(--white, #fff);
+  background-color: var(--bg-main, #150524);
+
+  scroll-behavior: smooth;
+
+  text-rendering: optimizeSpeed;
+  text-rendering: optimizeLegibility;
+
+  font-synthesis: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  /* нужно чтобы когда fixed при открытом меню или профиле держать ширину контейнера */
+  left: 0;
+  right: 0;
+
+  height: 100vh;
+
+  margin: 0;
+}
+
+button,
+input {
+  font-family: 'Gilroy', Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 140%;
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+  height: 0px; /* прячу ползунок горизонт скролл-бара */
+}
+::-webkit-scrollbar-track {
+  background: transparent; /* цвет фона у дорожки */
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2) inset; /* тень у дорожки */
+}
+::-webkit-scrollbar-thumb {
+  background: var(--no-active); /* цвет фона у дорожки */
+  border-radius: 12px; /* скругление углов */
+  border: none; /* толщина, стиль и цвет рамки */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--active); /* ползунок меняет цвет при наведении */
+}

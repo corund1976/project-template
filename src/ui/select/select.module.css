@@ -1,0 +1,76 @@
+.select_container {
+  position: relative;
+
+  height: 100%;
+}
+
+.select_disabled {
+  composes: select_container;
+
+  opacity: 0.5;
+}
+
+/* ReactSelect */
+.control {
+  /* font-family: 'Gilroy';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%; */
+
+  color: var(--no-active, #60628f);
+  /* background: var(--bg-main, #150524); */
+  background: transparent;
+
+  border: 1px solid var(--active-10, rgba(100, 106, 253, 0.1));
+  border-radius: 12px;
+
+  padding-left: 20px;
+  padding-right: 20px;
+
+  width: 100%;
+  height: 48px;
+
+  cursor: pointer !important;
+}
+@media screen and (min-width: 768px) {
+  .control {
+    height: 64px;
+  }
+}
+
+.menu {
+  background: var(--bg-main, #150524);
+
+  border: 1px solid var(--active-10, rgba(100, 106, 253, 0.1));
+  border-radius: 12px;
+
+  padding: 4px 20px;
+
+  margin-top: 8px; /* отступ вниз dropdown от select */
+}
+@media screen and (min-width: 768px) {
+  .menu {
+    padding: 8px 20px;
+  }
+}
+
+.option {
+  /* color: var(--active, #646afd); */
+  color: var(--no-active, #60628f);
+
+  padding: 6px 0; /* раздвигаю пункты в dropdown по вертикали */
+
+  cursor: pointer !important;
+
+  transition: color var(--trans-time) var(--trans-func);
+}
+.option:hover {
+  color: var(--hover, #8c90ff);
+}
+
+/* убираю курсор при "селекте" в focus */
+.input {
+  color: transparent;
+  text-shadow: 0 0 0 black;
+}

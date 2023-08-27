@@ -1,0 +1,19 @@
+.container {
+  /* padding: 0 5px; */
+  padding: 0 calc((100% - 320px) / 2 + 5px);
+}
+@media screen and (min-width: 375px) {
+  .container {
+    padding: 0 calc((100% - 375px) / 2 + 16px);
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 0 calc((100% - 768px) / 2 + 24px);
+  }
+}
+@media screen and (min-width: 1280px) {
+  .container {
+    padding: 0 calc((100% - 1280px) / 2 + 40px);
+  }
+}
